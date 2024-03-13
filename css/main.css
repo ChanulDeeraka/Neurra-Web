@@ -813,9 +813,9 @@ hr {
 }
 .btn-send {
     line-height: 48px;
-    border: 2px solid #04ff00;
-    background: #04ff00;
-    color: #000000;
+    border: 2px solid #000000;
+    background: #000000;
+    color: #ffffff;
     width: 100%;
     font-size: 15px;
     text-transform: uppercase;
