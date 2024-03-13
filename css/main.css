@@ -432,7 +432,7 @@ a:active {
     transition: all 0.3s ease-in-out 0s;
 }
 .navbar-default .navbar-brand {
-    color: #777;
+    color: #000000;
     padding: 5px 0;
 }
 .navbar-default .navbar-nav > li > a,
@@ -869,8 +869,9 @@ footer p a {
 footer p a:hover {
   color: #fff;
 }
-/* 
-.t-color {
-    color: #ff0000;
+
+.navbar-collapse {
+    padding-top: 40px;
+    padding-left: 30px;
     /* Change this color to your desired font color */
-} */
+}
