@@ -1,17 +1,25 @@
 <?php
-    $to = "morshed08@gmail.com";
-    $from = $_REQUEST['name'];
-    $headers = "Content-type: text/html;From: $from";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+    
+    // Email details
+    $to = "chanuldeeraka@gmail.com";
+    $subject = "Contact Form Submission";
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    $headers = "From: $email";
 
-    $fields = array();
-    $fields["name"] = $_REQUEST['name'];
-    $fields["email"] = $_REQUEST['email'];
-    $fields["message"] = $_REQUEST['message'];
-
-    $body = "Here is what was sent:\n\n";
-    $body .= 'Name : '.$fields['name']. '<br>';
-    $body .= 'Email : '.$fields['email']. '<br>';
-    $body .= 'Message : '.$fields['message']. '<br>';
-
-    $send = mail($to, $body, $headers);
-
+    // Send email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "success";
+    } else {
+        echo "error";
+    }
+} else {
+    // If not a POST request, redirect to index or show an error message
+    header("Location: /"); // Redirect to the homepage
+    exit();
+}
+?>

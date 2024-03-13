@@ -303,15 +303,15 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1 wow fadeInUp" data-wow-delay="0.3s">
                     	<div class="form-group">
-                    	    <form action="#" method="post" id="contact-form">
+                    	    <form method="post" action="/mail.php" id="contact-form">
                     	        <div class="input-field">
-                    	            <input type="text" class="form-control" placeholder="Your Name" name="name">
+                    	            <input type="text" class="form-control" placeholder="Your Name" name="name" id="name">
                     	        </div>
                     	        <div class="input-field">
-                    	            <input type="email" class="form-control" placeholder="Email Address" name="email">
+                    	            <input type="email" class="form-control" placeholder="Email Address" name="email" id="email">
                     	        </div>
                     	        <div class="input-field">
-                    	            <textarea class="form-control" placeholder="Your Message" rows="3" name="message"></textarea>
+                    	            <textarea class="form-control" placeholder="Your Message" rows="3" name="message" id="message"></textarea>
                     	        </div>
                     	        <button class="btn btn-send" type="submit">Send Me</button>
                     	    </form>
